@@ -158,7 +158,7 @@
 													<%
 													ArrayList<Vw_catalogocuenta_empresa> listaCatalogocuenta = new ArrayList<Vw_catalogocuenta_empresa>();
 													Dt_catalogocuenta dtCc = new Dt_catalogocuenta();
-													listaCatalogocuenta = dtCc.listarCatalogocuentaDeEmpresa(Vw_empresa.empresaActual);
+													listaCatalogocuenta = dtCc.listarCatalogocuentaDeEmpresa(Integer.parseInt(request.getParameter("idE")));
 													%>
 													<thead>
 														<tr>
