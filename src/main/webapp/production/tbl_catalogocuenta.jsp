@@ -104,7 +104,6 @@
 						<div class="title_left">
 							<h3>Catalogo Cuenta</h3>
 						</div>
-
 						<div class="title_right">
 							<div
 								class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
@@ -118,9 +117,7 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="clearfix"></div>
-
 					<div class="row">
 						<div class="col-md-12 col-md-12">
 							<div class="x_panel">
@@ -158,7 +155,7 @@
 													<%
 													ArrayList<Vw_catalogocuenta_empresa> listaCatalogocuenta = new ArrayList<Vw_catalogocuenta_empresa>();
 													Dt_catalogocuenta dtCc = new Dt_catalogocuenta();
-													listaCatalogocuenta = dtCc.listarCatalogocuentaDeEmpresa(Integer.parseInt(request.getParameter("idE")));
+													listaCatalogocuenta = dtCc.listarCatalogocuentaDeEmpresa(Vw_empresa.empresaActual);
 													%>
 													<thead>
 														<tr>
@@ -178,8 +175,6 @@
 															<td><%=catalogocuenta.getnombreComercial()%></td>
 															<td><%=catalogocuenta.getTitulo()%></td>
 															<td><%=catalogocuenta.getDescripcion()%></td>
-
-
 															<td><a
 																href="viewCatalogocuenta.jsp?IdCatalogo=<%=catalogocuenta.getIdCatalogo()%>"
 																target="blank"> <i class="fa fa-eye" title="Mostrar"></i>
@@ -196,7 +191,6 @@
 														}
 														%>
 													</tbody>
-
 												</table>
 											</div>
 										</div>
@@ -210,7 +204,6 @@
 		</div>
 	</div>
 	<!-- /page content -->
-
 	<!-- footer content -->
 	<footer>
 		<div class="pull-right">Sistema contable by UCASH</div>
@@ -251,9 +244,7 @@
 	<script src="../vendors/jszip/dist/jszip.min.js"></script>
 	<script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
 	<script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
-
 	<!-- Custom Theme Scripts -->
 	<script src="../build/js/custom.min.js"></script>
-
 </body>
 </html>
