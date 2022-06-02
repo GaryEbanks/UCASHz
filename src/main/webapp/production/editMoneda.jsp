@@ -24,9 +24,9 @@ if(request.getParameter("msj") != null){
 	int currentUsuario;
 	
 	//OBTENEMOS LA SESION
-	currentUsuario = vwur.getId_user();
 	vwur = (Vw_usuariorol) session.getAttribute("acceso");
 	if(vwur!=null){
+		currentUsuario = vwur.getId_user();
 		//OBTENEMOS LA LISTA DE OPCIONES ASIGNADAS AL ROL
 		
 		listOpc = dtro.ObtenerRolOpcionPorIdLogin(vwur.getIdUsuarioRol());
@@ -131,7 +131,7 @@ tm = dtm.getMonedaByID(Integer.parseInt(mon));
 									<form class="" action="../Sl_moneda" method="post" novalidate>
 										<input type="hidden" value="2" name="opcion" id="opcion" /> 
 										<input type="hidden" value="<%=tm.getIdMoneda()%>" name="IdMoneda"id="IdMoneda" /> 
-										<%-- <input type="hidden" value="<%=currentUsuario%>" name="usuario" id="usuario"/> --%>
+										<input type="hidden" value="<%=currentUsuario%>" name="usuario" id="usuario"/>
 										<span class="section">Datos de Moneda</span>
 
 										<div class="field item form-group">
